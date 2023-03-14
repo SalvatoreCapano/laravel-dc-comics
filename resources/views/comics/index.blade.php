@@ -10,7 +10,7 @@
             </a>
         
     </div>
-    <div class="row">
+    <div class="row cardsContainer">
         @foreach ($comics as $comic)
             
                 <div class="card">

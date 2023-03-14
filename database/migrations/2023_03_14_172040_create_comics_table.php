@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('title', 64);
-            $table->string('thumb', 124);
+            $table->text('description');
+            $table->string('thumb', 255);
             $table->decimal('price', $precision = 6, $scale = 2);
             $table->string('series', 64);
             $table->date('sale_date');
