@@ -1,0 +1,75 @@
+// @import "~bootstrap/scss/bootstrap";
+
+header {
+    background-color: #ffffff;
+    height: calc(70px + 2rem);
+
+    .container {
+        max-width: 1260px;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.imgContainer {
+    img {
+        height: 70px;
+    }
+}
+
+.navbar ul {
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    li {
+        height: calc(70px + 2rem);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+
+        a {
+            color: #111111;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+
+            padding: 0 5px;   
+        }
+
+        &.active {
+            a {
+                color: #0583f9;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+    
+                height: 5px;
+                background-color: #0583f9;
+            }
+        }
+    }
+}
+
+.searchbar {
+    border-bottom: 2px solid #0583f9;
+
+    input {
+        border: none;
+        background: none;
+        text-align: end;
+    }
+}

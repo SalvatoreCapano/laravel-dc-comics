@@ -1,21 +1,25 @@
 @extends('layouts.app')
 
+@section('page_title')
+    Home | DC Comics
+@endsection
+
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
+    {{-- <section class="contentSection"> --}}
 
-                <div class="card">
-                    <div class="card-body">
-                        <h1 class="card-title">DC Comics</h1>
+        {{-- <div class="container"> --}}
 
-                        <a href="{{ route('comics.index') }}" class="btn btn-primary">
-                            Vedi tutti i fumetti
-                        </a>
-                    </div>
-                </div>
+            <h1 class="sectionTitle">DC Comics</h1>
+    
+            {{-- @foreach ($comics as $comic)
+                                {{ $comic['title'] }}
+                            @endforeach --}}
+    
+            <a href="{{ route('comics.index') }}" class="actionBtn">
+                Vedi tutti i fumetti
+            </a>
 
-            </div>
-        </div>
-    </div>
+        {{-- </div> --}}
+
+    {{-- </section> --}}
 @endsection

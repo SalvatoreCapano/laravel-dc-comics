@@ -1,1 +1,44 @@
-@import "~bootstrap/scss/bootstrap";
+// @import "~bootstrap/scss/bootstrap";
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+main {
+    background-color: red;
+}
+
+.actionBtn {
+    background-color: #0583f9;
+
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+
+    
+
+    border: none;
+
+    padding: 10px 60px;
+
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: #3097f8;
+    }
+
+    &:active {
+        background-color: #3fa1fc;
+
+    }
+}

@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>DC Comics</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        @vite('resources/js/app.js')
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <div class="row">
-                    <div class="col text-center">
-                        HEADER
-                    </div>
+    <title>@yield('page_title')</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+    {{-- FontAwesome --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <!-- Styles -->
+    @vite('resources/js/app.js')
+
+</head>
+
+<body class="antialiased">
+
+    @include('partials.header')
+
+    <main>
+        <section>
+            <section class="contentSection">
+                <div class="container">
+                    @yield('content')
                 </div>
-            </div>
-        </header>
+            </section>
+        </section>
+    </main>
 
-        <main>
-            @yield('content')
-        </main>
+    @include('partials.footer')
 
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col text-center">
-                        FOOTER
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </body>
+    @yield('js')
+</body>
+
 </html>
