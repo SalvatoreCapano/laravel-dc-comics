@@ -10,16 +10,30 @@
     <div class="cardsContainer">
         @foreach ($comics as $comic)
             <div class="card">
-                <div class="card-body">
+                <a href="{{ route('comics.show', $comic->id) }}">
+
                     <div class="imgContainer">
                         <img src="{{ $comic['thumb'] }}" alt="">
                     </div>
                     <h2 class="seriesTitle">{{ $comic->title }}</h2>
 
-                    <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary">
-                        Vedi dettagli
-                    </a>
-                </div>
+                    <div class="actions">
+
+                        <a href="{{ route('comics.show', $comic->id) }}" class="action show">
+                            <i class="bi bi-info-square"></i>
+                        </a> <!-- /comics.show-->
+
+                        <a href="{{ route('comics.show', $comic->id) }}" class="action update">
+                            <i class="bi bi-pencil"></i>
+                        </a> <!-- /comics.show-->
+
+                        <a href="{{ route('comics.show', $comic->id) }}" class="action delete">
+                            <i class="bi bi-trash"></i>
+                        </a> <!-- /comics.show-->
+
+                    </div>
+
+                </a> <!-- /comics.show-->
             </div>
         @endforeach
     </div>
@@ -29,5 +43,4 @@
             Aggiungi fumetto
         </a>
     </div>
-
 @endsection

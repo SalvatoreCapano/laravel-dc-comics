@@ -1,4 +1,5 @@
 // @import "~bootstrap/scss/bootstrap";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
 *{ 
     margin: 0;
@@ -73,8 +74,11 @@ main {
 }
 
 a {
-    color: #0583f9;
-    &:visited {
+    &:not(.actionBtn) {
+
         color: #0583f9;
+        &:visited {
+            color: #0583f9;
+        }
     }
 }
