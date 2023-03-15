@@ -23,13 +23,9 @@
                             <i class="bi bi-info-square"></i>
                         </a> <!-- /comics.show-->
 
-                        <a href="{{ route('comics.show', $comic->id) }}" class="action update">
+                        <a href="{{ route('comics.edit', $comic->id) }}" class="action update">
                             <i class="bi bi-pencil"></i>
-                        </a> <!-- /comics.show-->
-
-                        {{-- <a href="{{ route('comics.show', $comic->id) }}" class="action delete">
-                            <i class="bi bi-trash"></i>
-                        </a> --}}
+                        </a> <!-- /comics.edit-->
 
                         <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                             @csrf

@@ -1,19 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="card">
-        <h1 class="seriesTitle">{{ $comic->title }}</h1>
+    <h1 class="sectionTitle">{{ $comic->title }}</h1>
+
+    <div>
         <a href="{{ route('comics.index') }}" class="btn btn-primary">
             Torna indietro
         </a>
     </div>
-    <div class="row g-3">
-        <div class="col mb-3">
-            <div class="card text-center">
-                <div class="card-body">
-                    <p>{{ $comic->description }}</p>
-                </div>
+
+    <div class="cardsContainer">
+
+        <div class="card">
+
+           <a href="#">
+            <div class="imgContainer">
+                <img src="{{ $comic['thumb'] }}" alt="">
             </div>
+            <h2 class="seriesTitle">{{ $comic->title }}</h2>
+           </a>
+
         </div>
     </div>
 @endsection

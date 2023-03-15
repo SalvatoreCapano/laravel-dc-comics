@@ -1,4 +1,4 @@
-.createForm {
+.createForm, .editForm {
     
     .inputs {
         display: flex;
@@ -27,6 +27,10 @@
 
             &:last-child {
                 flex-basis: 100%;
+            }
+
+            textarea {
+                height: 140px;
             }
         }
     }

@@ -7,7 +7,7 @@ import '~resources/scss/_button.scss';
 import '~resources/scss/footer.scss';
 import '~resources/scss/home.scss';
 import '~resources/scss/actions.scss';
-import '~resources/scss/addForm.scss';
+import '~resources/scss/_form.scss';
 
 import * as bootstrap from 'bootstrap';
 
