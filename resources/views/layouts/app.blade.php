@@ -18,24 +18,30 @@
 
 </head>
 
-<body class="antialiased">
+<body>
 
-    @include('partials.header')
+    <div id="app">
 
-    <main>
-        <div class="heroSection"></div>
-        <section>
-            <section class="contentSection">
-                <div class="container">
-                    @yield('content')
-                </div>
+        @include('partials.header')
+
+        <main>
+            <div class="heroSection"></div>
+            <section>
+                <section class="contentSection">
+                    <div class="container">
+                        @yield('content')
+                    </div>
+                </section>
             </section>
-        </section>
-    </main>
+        </main>
 
-    @include('partials.footer')
+        @include('partials.footer')
 
+    </div> <!-- /app -->
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     @yield('js')
+
 </body>
 
 </html>

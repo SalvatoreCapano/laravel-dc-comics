@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('page_title')
+    {{ $comic->title }} | DC Comics
+@endsection
+
 @section('content')
     <h1 class="sectionTitle">{{ $comic->title }}</h1>
 

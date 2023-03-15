@@ -8,7 +8,7 @@
     <h1 class="sectionTitle">Tutti i fumetti</h1>
 
     <div class="cardsContainer">
-        @foreach ($comics as $comic)
+        @foreach ($comics as $index => $comic)
             <div class="card">
                 <a href="{{ route('comics.show', $comic->id) }}">
 
@@ -19,7 +19,7 @@
 
                     <div class="actions">
 
-                        <a href="{{ route('comics.show', $comic->id) }}" class="action show">
+                        <a href="{{ route('comics.show', $comic->id) }}" class="action show" @click="testFn()">
                             <i class="bi bi-info-square"></i>
                         </a> <!-- /comics.show-->
 
@@ -27,15 +27,28 @@
                             <i class="bi bi-pencil"></i>
                         </a> <!-- /comics.edit-->
 
-                        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
-                            @csrf
+                        <a class="action delete" @click="openModal = true">
+                            <i class="bi bi-trash"></i>
+                        </a> <!-- /comics.destroy-->
 
-                            @method('DELETE')
+                        <div class="overlay" v-if="openModal">
+                            <div class="modal">
+                                <h4>Conferma Eliminazione</h4>
+                                <p>Sei sicuro di voler eliminare il fumetto?</p>
+                                <div class="buttons">
+                                    <button class="action" @click="openModal = false">Annulla</button>
+                                    <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                        @csrf
 
-                            <button type="submit" class="action delete">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </form> <!-- /comics.destroy-->
+                                        @method('DELETE')
+
+                                        <button type="submit" class="action delete">
+                                            Elimina
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
 
