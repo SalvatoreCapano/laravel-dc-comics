@@ -27,9 +27,19 @@
                             <i class="bi bi-pencil"></i>
                         </a> <!-- /comics.show-->
 
-                        <a href="{{ route('comics.show', $comic->id) }}" class="action delete">
+                        {{-- <a href="{{ route('comics.show', $comic->id) }}" class="action delete">
                             <i class="bi bi-trash"></i>
-                        </a> <!-- /comics.show-->
+                        </a> --}}
+
+                        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                            @csrf
+
+                            @method('DELETE')
+
+                            <button type="submit" class="action delete">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </form> <!-- /comics.destroy-->
 
                     </div>
 

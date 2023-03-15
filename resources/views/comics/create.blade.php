@@ -52,7 +52,7 @@
                 </div>
             </div>
 
-            <div>
+            <div class="btnContainer">
                 <button type="submit" class="ctaBtn">
                     Salva
                 </button>

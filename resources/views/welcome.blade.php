@@ -5,23 +5,11 @@
 @endsection
 
 @section('content')
-    {{-- <section class="contentSection"> --}}
+    <h1 class="sectionTitle">DC Comics</h1>
 
-        
-
-        {{-- <div class="container"> --}}
-
-            <h1 class="sectionTitle">DC Comics</h1>
-    
-            {{-- @foreach ($comics as $comic)
-                                {{ $comic['title'] }}
-                            @endforeach --}}
-    
-            <a href="{{ route('comics.index') }}" class="actionBtn">
-                Vedi tutti i fumetti
-            </a>
-
-        {{-- </div> --}}
-
-    {{-- </section> --}}
+    <div class="btnContainer">
+        <a href="{{ route('comics.index') }}" class="ctaBtn">
+            Vedi tutti i fumetti
+        </a>
+    </div>
 @endsection
