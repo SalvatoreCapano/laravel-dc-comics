@@ -1,0 +1,37 @@
+.createForm {
+    
+    .inputs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+       
+        >.inputGroup {
+            flex-basis: calc(50% - 0.5rem);
+            margin-bottom: 1rem;
+            >*:not(label) {
+                padding: 3px;
+                width: 100%;
+            }
+            >label {
+                display: block;
+                color: aliceblue;
+                font-weight: bold;
+                margin-bottom: 2px;
+            }
+
+            select:focus {
+                >:first-child {
+                    display: none;
+                }
+            }
+
+            &:last-child {
+                flex-basis: 100%;
+            }
+        }
+    }
+    button {
+        display: block;
+        margin: 0 auto;
+    }
+}

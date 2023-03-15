@@ -23,6 +23,7 @@
     @include('partials.header')
 
     <main>
+        <div class="heroSection"></div>
         <section>
             <section class="contentSection">
                 <div class="container">

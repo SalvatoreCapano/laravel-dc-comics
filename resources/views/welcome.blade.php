@@ -7,6 +7,8 @@
 @section('content')
     {{-- <section class="contentSection"> --}}
 
+        
+
         {{-- <div class="container"> --}}
 
             <h1 class="sectionTitle">DC Comics</h1>

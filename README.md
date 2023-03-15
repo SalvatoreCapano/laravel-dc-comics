@@ -1,6 +1,7 @@
 # Template Laravel9 + Bootstrap + SASS
 ## Laravel DC Comics
 
+### Parte 1
 Oggi create un nuovo progetto Laravel 9 per gestire un archivio di fumetti.
 
 Milestone 1
@@ -15,3 +16,10 @@ Iniziate a definire le prime operazioni CRUD con le relative view:
 
 Bonus:
 Creare il seeder per la tabella comics utilizzando il file in allegato.
+
+### Parte 2
+
+Oggi lavorate sulla stessa repo di ieri e completate le operazioni CRUD.
+
+Bonus:
+Tramite javascript, quando l'utente clicca sul pulsante "delete", chiedere conferma della cancellazione, prima di eliminare l'elemento.
