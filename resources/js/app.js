@@ -9,6 +9,8 @@ import '~resources/scss/home.scss';
 import '~resources/scss/actions.scss';
 import '~resources/scss/_form.scss';
 import '~resources/scss/_modal.scss';
+import '~resources/scss/_show.scss';
+import '~resources/scss/_error.scss';
 
 import * as bootstrap from 'bootstrap';
 

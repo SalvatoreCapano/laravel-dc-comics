@@ -1,0 +1,13 @@
+.showCard {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.descriptionContainer {
+    h3 {
+        margin-bottom: 0.5rem;
+    }
+    color: white;
+}

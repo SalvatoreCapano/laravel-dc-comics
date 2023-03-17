@@ -23,3 +23,11 @@ Oggi lavorate sulla stessa repo di ieri e completate le operazioni CRUD.
 
 Bonus:
 Tramite javascript, quando l'utente clicca sul pulsante "delete", chiedere conferma della cancellazione, prima di eliminare l'elemento.
+
+### Parte 3
+
+Lavorando sulla repo di ieri, potete aggiungere le validazioni in modo da rendere più stabile il vostro gestionale di fumetti.
+
+Bonus:
+- validare gli input ricevuti in fase di creazione e modifica, rispondendo con errori chiari e in italiano.
+- utilizzare le Request personalizzate per validare i dati

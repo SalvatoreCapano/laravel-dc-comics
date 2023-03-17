@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 // Models
 use App\Models\Comic;
 
+// Helpers
+// use Illuminate\Validation\Rule;
+// use Illuminate\Support\Facades\Validator;
+
+// Requests
+use App\Http\Requests\StoreComicsRequest;
+
 class ComicController extends Controller
 {
     /**
@@ -37,7 +44,7 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreComicsRequest $request)
     {
         $data = $request->all();
 
@@ -87,7 +94,7 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreComicsRequest $request, $id)
     {
         $comic = Comic::findOrFail($id);
 

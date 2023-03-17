@@ -7,23 +7,35 @@
 @section('content')
     <h1 class="sectionTitle">{{ $comic->title }}</h1>
 
-    <div>
+    <div class="goBackBtn">
         <a href="{{ route('comics.index') }}" class="btn btn-primary">
+            <i class="bi bi-chevron-left"></i>
             Torna indietro
         </a>
     </div>
 
-    <div class="cardsContainer">
-
-        <div class="card">
-
-           <a href="#">
-            <div class="imgContainer">
-                <img src="{{ $comic['thumb'] }}" alt="">
+    <div class="showCard">
+        {{-- <div class="cardsContainer"> --}}
+    
+            <div class="card">
+    
+               <a href="#">
+                <div class="imgContainer">
+                    <img src="{{ $comic['thumb'] }}" alt="">
+                </div>
+                <h2 class="seriesTitle">{{ $comic->title }}</h2>
+               </a>
+    
             </div>
-            <h2 class="seriesTitle">{{ $comic->title }}</h2>
-           </a>
+        {{-- </div> --}}
 
+        <div class="descriptionContainer">
+            <h3>Trama</h3>
+            <p>
+                {{ $comic['description'] }}
+            </p>
         </div>
+
     </div>
+
 @endsection

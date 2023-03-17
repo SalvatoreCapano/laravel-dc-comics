@@ -14,3 +14,15 @@ body {
 main {
     background-color: red;
 }
+
+.goBackBtn {
+    margin-bottom: 1rem;
+    a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.05s;
+        &:hover {
+            color: #a3d2ff;
+        }
+    }
+}
