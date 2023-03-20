@@ -39,4 +39,16 @@ class StoreComicsRequest extends FormRequest
             ]
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'title.required' => 'Il campo "Titolo" è obbligatorio.',
+            'thumb.required' => 'Il campo "Immagine" è obbligatorio.',
+            'price.required' => 'Il campo "Prezzo" è obbligatorio.',
+            'series.required' => 'Il campo "Serie" è obbligatorio.',
+            'sale_date.required' => 'Il campo "Data di pubblicazione" è obbligatorio.',
+            'type.required' => 'Il campo "Tipo" è obbligatorio.'
+        ];
+    }
 }
