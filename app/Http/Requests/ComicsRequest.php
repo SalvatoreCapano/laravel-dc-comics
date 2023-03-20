@@ -7,7 +7,7 @@ use Illuminate\Foundation\Http\FormRequest;
 // Helpers
 use Illuminate\Validation\Rule;
 
-class StoreComicsRequest extends FormRequest
+class ComicsRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
